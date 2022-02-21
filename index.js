@@ -144,10 +144,12 @@ prompt()
         return generateMarkdown(projectData);
     })
     .then(markdown => {
-        console.log(markdown);
+        return writeToFile(markdown);
     })
-    // .then(markdown => {
-    //     return writeToFile(markdown);
-    // })
-    ;
+    .then(writeToFileResponse => {
+        console.log(writeToFileResponse);
+    })
+    .catch(err => {
+        console.log(err);
+    });
 

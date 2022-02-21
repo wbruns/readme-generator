@@ -1,14 +1,44 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license === 'No License') {
+    return '';
+  } else if (license === 'MIT') {
+
+  } else if (license === 'GNU GPLv3') {
+
+  } else if (license === 'Mozilla Public License 2.0') {
+
+  }
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === 'No License') {
+    return '';
+  } else if (license === 'MIT') {
+
+  } else if (license === 'GNU GPLv3') {
+
+  } else if (license === 'Mozilla Public License 2.0') {
+    
+  }
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license === 'No License') {
+    return '';
+  } else if (license === 'MIT') {
+
+  } else if (license === 'GNU GPLv3') {
+
+  } else if (license === 'Mozilla Public License 2.0') {
+    
+  }
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -22,10 +52,9 @@ module.exports = projectData => {
     title, description, installInstructions, usage,
     contribution, test, license, username, email
   } = projectData;
-  console.log(license);
 
   return `
-  # **${title}**
+  # **${title}** ${renderLicenseBadge(license)}
 
   ## **Description**
 
@@ -40,28 +69,30 @@ module.exports = projectData => {
   - [Questions](#questions)
   - [License](#license)
 
-  ## **Installation** {#installation}
+  ## **Installation**
 
   ${installInstructions}
 
-  ## **Usage** {#usage}
+  ## **Usage**
 
   ${usage}
 
-  ## **Contributing** {#contributing}
+  ## **License**
+
+  ${license}
+
+  ## **Contributing**
 
   ${contribution}
 
-  ## **Testing** {#testing}
+  ## **Testing**
 
   ${test}
 
-  ## **Questions** {#questions}
+  ## **Questions**
 
   You can check out my other projects on GitHub at *[${username}](https://github.com/${username})*.
 
   Or if you have any questions you can send them to me at *${email}*.
-
-  ## **License** {#license}
   `
 };
