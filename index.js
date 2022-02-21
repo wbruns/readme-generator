@@ -90,7 +90,7 @@ const prompt = () => {
             type: 'list',
             name: 'license',
             message: 'Which license is associated with your project?',
-            choices: ['MIT', 'GNU GPLv3', 'Mozilla Public License 2.0', 'No License']
+            choices: ['MIT', 'GNU GPLv3', 'Unlicense', 'No License']
         },
         {
             type: 'input',

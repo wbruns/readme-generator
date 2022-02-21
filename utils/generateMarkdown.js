@@ -4,25 +4,11 @@ function renderLicenseBadge(license) {
   if (license === 'No License') {
     return '';
   } else if (license === 'MIT') {
-
+    return '[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)'
   } else if (license === 'GNU GPLv3') {
-
-  } else if (license === 'Mozilla Public License 2.0') {
-
-  }
-};
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license === 'No License') {
-    return '';
-  } else if (license === 'MIT') {
-
-  } else if (license === 'GNU GPLv3') {
-
-  } else if (license === 'Mozilla Public License 2.0') {
-    
+    return '[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)'
+  } else if (license === 'Unlicense') {
+    return '[![Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](https://unlicense.org/)'
   }
 };
 
@@ -31,21 +17,28 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license === 'No License') {
     return '';
-  } else if (license === 'MIT') {
+  } else {
+  return `
+  ## **License**
 
-  } else if (license === 'GNU GPLv3') {
-
-  } else if (license === 'Mozilla Public License 2.0') {
-    
+  This project is licensed under the ${license} license.
+  
+  ${renderLicenseLink(license)}
+  `
   }
 };
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
-}
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(license) {
+  if (license === 'Unlicense') {
+    return 'For more information check out their website at [Unlicense](https://unlicense.org/)';
+  } else if (license === 'MIT') {
+    return 'For more information check out their website at [MIT](https://lbesson.mit-license.org/)';
+  } else if (license === 'GNU GPLv3') {
+    return 'For more information check out their website at [GNU GPLv3](http://perso.crans.org/besson/LICENSE.html)';
+  }
+};
 
 module.exports = projectData => {
   const {
@@ -77,9 +70,7 @@ module.exports = projectData => {
 
   ${usage}
 
-  ## **License**
-
-  ${license}
+  ${renderLicenseSection(license)}
 
   ## **Contributing**
 
