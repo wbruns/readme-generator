@@ -1,35 +1,30 @@
-
-  # **My README Generator** [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+# **My README Generator**
 
   ## **Description**
 
-  This is a README Generator.  You can run this node program on the command line and after answering some questions a professional README is created for your project.
+  This is a README Generator.  You can run this node program on the command line and after answering some questions a professional README is created for your project.  The file is written to the 'dist' folder.
 
   ## **Table of Contents**
 
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Tutorial](#tutorial)
   - [Contributing](#contributing)
   - [Testing](#testing)
   - [Questions](#questions)
-  - [License](#license)
 
   ## **Installation**
 
-  To install the README Generator, you can clone the code from my GitHub repository. After cloning the code simply install the packages from the package.json file.
+  To install the README Generator, you can clone the code from my GitHub repository. After cloning the code simply install the packages from the package.json file.  This program only uses inquirer.
 
   ## **Usage**
 
   To use the project simply run 'node index' on the command line after installing the correct dependencies.  Answer the question prompts and you're done!  A new professional README will be created in the 'dist' directory
 
-  
-  ## **License**
+  ## **Tutorial**
 
-  This project is licensed under the MIT license.
+  Click this [video](https://drive.google.com/file/d/1mvWaFiqT__P4NlUlf_nvc0iPNVNKJH8-/view) link to view a video tutorial of this program in action!
   
-  For more information check out their website at [MIT](https://lbesson.mit-license.org/)
-  
-
   ## **Contributing**
 
   If you wish to contribute to this project, create a fork of my repository on GitHub. Then when you have made your changes create a merge request and I will look into adding your code as soon as I can.
@@ -41,6 +36,3 @@
   ## **Questions**
 
   You can check out my other projects on GitHub at *[wbruns](https://github.com/wbruns)*.
-
-  Or if you have any questions you can send them to me at *wbruns07@gmail.com*.
-  
